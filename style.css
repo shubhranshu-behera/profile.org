@@ -64,12 +64,13 @@ html {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -1;
 }
 
 
 
 body {
-    background: url(image/background.jpg);
+  
   background-color: rgb(255, 255, 255);
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -131,6 +132,7 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
+  color: var(--first-color);
   background-color: var(--first-color);
 }
 .section {
@@ -155,7 +157,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 1px 4px rgba(5, 43, 82, 0.15);
 }
 
 /* ===== NAV ===== */
