@@ -91,7 +91,7 @@ sr.reveal(".project-img", { interval: 200 });
   }
 
 
-  var messageArr = ["Web-Developer", "Frontend Developer", "Backend Developer"];
+  var messageArr = ["𝕁𝔸𝕍𝔸 𝔽𝕌𝕃𝕃𝕊𝕋𝔸ℂ𝕂<br> 𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ"];
   var textPosition = 0;
   var speed = 200;
 
@@ -105,3 +105,7 @@ sr.reveal(".project-img", { interval: 200 });
 
 
   window.addEventListener("load" , typewriter);
+
+  //for video background
+
+ 
