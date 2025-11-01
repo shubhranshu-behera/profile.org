@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- =====BOX ICONS===== -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Shubhranshu Shekhar Behera</title>
+</head>
+
+<body>
+
+
+
+  <video autoplay muted loop id="myVideo">
+    <source src="images/condensation_-_32972 (1080p).mp4" type="video/mp4">
+  </video>
+
+
+
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div class="nav-logo">
+        <a href="#home" aria-label="Home">
+          <img src="images/logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="nav-menu" id="nav-menu" role="navigation" aria-label="Main menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    
+    <!--===== HOME section =====-->
+    <section class="home bd-grid section" id="home">
+      <div class="home-data">
+        <h2 class="home-title">
+          Hi 👋,<br />I'am <span class="home-title-color"> <br> Shubhranshu Shekhar </span><br />
+         <span id="jobTitle" >𝕁𝔸𝕍𝔸 𝔽𝕌𝕃𝕃𝕊𝕋𝔸ℂ𝕜𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ</span> 
+         
+        </h2>
+
+        <a href="https://drive.google.com/file/d/1t4YD5RGBYCMTBnUiB1OmM9TLzJ_Y7boS/view?usp=drive_link" target="blank"
+          class="button">Resume</a>
+
+      </div>
+
+      <div class="home-social">
+        <a href="https://www.linkedin.com/in/shubhranshu-behera" target="blank" class="home-social-icon"><i
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/shubhranshu-behera" target="blank" class="home-social-icon"><i
+            class="bx bxl-github"></i></a>
+      </div>
+
+      <div class="home-img">
+        <img src="images/cropped_circle_image.png" height="250" width="250"/>
+      </div>
+    </section>
+
+    <!--===== ABOUT section =====-->
+    <section class="about section" id="about">
+      <h2 class="section-title">About</h2>
+
+      <div class="about-container bd-grid">
+        <div class="about-card" role="region" aria-label="About Shubhranshu">
+          <div class="about-left" aria-hidden="false">
+            <img src="images/about.png" alt="Shubhranshu Shekhar Behera" />
+          </div>
+
+          <div class="about-right">
+            <h3 class="about-name">Shubhranshu Shekhar Behera</h3>
+            <p class="about-role">Java Fullstack Developer</p>
+
+            <p class="about-pitch">
+              I build scalable backend systems with Java &amp; Spring Boot and craft responsive frontends using modern web technologies. I deliver clean, testable code and ship features quickly in Agile teams.
+            </p>
+
+            <ul class="about-highlights" aria-hidden="false">
+              <li><strong>Backend:</strong> Java · Spring Boot · Hibernate · REST APIs</li>
+              <li><strong>Frontend:</strong> HTML · CSS · JavaScript · Angular</li>
+              <li><strong>DB &amp; Tools:</strong> MySQL / Oracle · Git · Maven · Postman</li>
+            </ul>
+
+            <div class="tech-tags" aria-hidden="true" style="margin-top:0.6rem">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">REST</span>
+              <span class="tag">Hibernate</span>
+              <span class="tag">Angular</span>
+            </div>
+
+            <!-- Mail details (replaces contact button) -->
+            <div class="about-ctas" style="margin-top:0.9rem">
+              <div class="mail-details" role="group" aria-label="Contact details">
+                <a href="mailto:beherashubhranshu000@gmail.com" class="email-link" title="Send email">
+                  <span class="email-text">beherashubhranshu000@gmail.com</span>
+                </a>
+                <button id="copyEmailBtn" class="copy-btn" aria-label="Copy email">Copy</button>
+                <a href="https://drive.google.com/file/d/1t4YD5RGBYCMTBnUiB1OmM9TLzJ_Y7boS/view?usp=drive_link" target="_blank" class="btn resume-btn">View Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- copy email script (for about section) -->
+    <script>
+      (function(){
+        const copyBtn = document.getElementById('copyEmailBtn');
+        if (!copyBtn) return;
+        const email = 'beherashubhranshu000@gmail.com';
+        copyBtn.addEventListener('click', async function() {
+          try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              await navigator.clipboard.writeText(email);
+            } else {
+              const ta = document.createElement('textarea');
+              ta.value = email;
+              ta.style.position = 'fixed';
+              ta.style.left = '-9999px';
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+            }
+            copyBtn.textContent = 'Copied';
+            setTimeout(()=> copyBtn.textContent = 'Copy', 1800);
+          } catch (e) {
+            console.warn('Copy failed', e);
+          }
+        });
+      })();
+    </script>
+
+    <!---========Education section======--->
+    <section class="education section" id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-container bd-grid">
+    
+        <div class="education-data">
+          <div class="education-names">
+            <span class="education-name">Master in Computer Applications</span> 
+            <p class="education-platform ">Khallikote Unitary University,Berhampur</p>
+            <p class="education-duration ">October 2021 - June 2023</p>
+
+          </div>
+        </div>
+        </div>
+      <div class="education-container bd-grid">
+    
+    <div class="education-data">
+      <div class="education-names">
+        <span class="education-name">B.Sc. in Physics</span>
+        <p class="education-platform ">Fakir Mohan University,Balasore</p>
+        <p class="education-duration ">August 2018 - May 2021</p>
+
+      </div>
+    </div>
+    </div>
+    <div class="education-container bd-grid">
+    
+      <div class="education-data">
+        <div class="education-names">
+          <span class="education-name">12th</span> 
+          <p class="education-platform ">Fakir Mohan Junior College,Balasore</p>
+          <p class="education-duration ">August 2016 - May 2018</p>
+
+        </div>
+      </div>
+      </div>
+      <div class="education-container bd-grid">
+    
+        <div class="education-data">
+          <div class="education-names">
+            <span class="education-name">10th</span> 
+            <p class="education-platform ">Bamamani Tulamtula High School,Tulamtula</p>
+            <p class="education-duration ">May 2015 - April 2016</p>
+
+          </div>
+        </div>
+        </div>
+
+    <!--===== EXPERIENCE =====-->
+    <section class="experience section" id="experience">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-timeline">
+
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <article class="timeline-item techmahindra" aria-label="Software Engineer — Tech Mahindra">
+          <div class="timeline-header">
+            <div>
+              <h3 class="role">Software Engineer</h3>
+              <p class="company">Tech Mahindra — Full-time</p>
+              <div class="meta">
+                <span class="date-range">Jun 2025 - Present</span>
+                <span class="duration" data-start="2025-06" data-end="present"></span>
+                <span class="location">Bhubaneswar, Odisha, India · On-site</span>
+              </div>
+            </div>
+            <div style="text-align:right">
+              <p class="company-duration" data-start="2024-03" data-end="present" style="margin:0;color:#9fb8ff;font-weight:600"></p>
+              <p style="margin:0;font-size:0.82rem;color:#bcd6ff">Backend / Package Delivery</p>
+            </div>
+          </div>
+
+          <p class="experience-text">
+            Contributing to the package delivery backend using Java and Spring Boot. Focus on performance, scalability and reliable delivery flows.
+          </p>
+
+          <ul class="experience-bullets">
+            <li>Designed and optimized APIs for package tracking and routing.</li>
+            <li>Implemented improvements to database access (JDBC / Spring Data) and reduced latency.</li>
+            <li>Collaborated in Agile sprints to deliver features and fix production issues.</li>
+          </ul>
+
+          <div class="tech-tags" aria-hidden="true">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">REST</span>
+            <span class="tag">MySQL / Oracle</span>
+            <span class="tag">Git / Maven</span>
+          </div>
+        </article>
+
+        <article class="timeline-item techmahindra" aria-label="Associate Software Engineer — Tech Mahindra">
+          <div class="timeline-header">
+            <div>
+              <h3 class="role">Associate Software Engineer</h3>
+              <p class="company">Tech Mahindra — Full-time</p>
+              <div class="meta">
+                <span class="date-range">Mar 2024 - Jun 2025</span>
+                <span class="duration" data-start="2024-03" data-end="2025-06"></span>
+                <span class="location">Bhubaneswar, Odisha, India</span>
+              </div>
+            </div>
+            <div style="text-align:right">
+              <p style="margin:0;color:#9fb8ff;font-weight:600">On-site</p>
+            </div>
+          </div>
+
+          <p class="experience-text">
+            Worked on backend modules, feature development and bug resolution — learning design patterns and production best practices.
+          </p>
+
+          <ul class="experience-bullets">
+            <li>Built service components using Servlets, Spring and JDBC.</li>
+            <li>Participated in code reviews and improved unit test coverage.</li>
+            <li>Assisted in on-call support and incident triage.</li>
+          </ul>
+
+          <div class="tech-tags" aria-hidden="true">
+            <span class="tag">Java</span>
+            <span class="tag">Spring</span>
+            <span class="tag">JDBC</span>
+            <span class="tag">Agile</span>
+          </div>
+        </article>
+
+        <article class="timeline-item oupp" aria-label="Fullstack Java Developer — OUPP">
+          <div class="timeline-header">
+            <div>
+              <h3 class="role">Fullstack Java Developer</h3>
+              <p class="company">Odisha Upskilling and Placement Program (OUPP) — Apprenticeship</p>
+              <div class="meta">
+                <span class="date-range">Sep 2023 - Feb 2024</span>
+                <span class="duration" data-start="2023-09" data-end="2024-02"></span>
+                <span class="location">Keonjhar, Odisha · On-site</span>
+              </div>
+            </div>
+            <div style="text-align:right">
+              <p style="margin:0;color:#9fb8ff;font-weight:600">Apprenticeship</p>
+            </div>
+          </div>
+
+          <p class="experience-text">
+            Built fullstack features using Java and front-end technologies; collaborated with small teams to deliver user-focused applications.
+          </p>
+
+          <ul class="experience-bullets">
+            <li>Implemented UI components and backend endpoints to improve user workflows.</li>
+            <li>Gained hands-on experience with Spring, Hibernate and basic DevOps practices.</li>
+          </ul>
+
+          <div class="tech-tags" aria-hidden="true">
+            <span class="tag">Java Fullstack</span>
+            <span class="tag">Spring</span>
+            <span class="tag">Hibernate</span>
+            <span class="tag">HTML/CSS/JS</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-container bd-grid">
+        <div>
+          <h2 class="skills-subtitle">Web Development</h2>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-html5 skills-icon"></i>
+              <span class="skills-name">HTML</span>
+            </div>
+            <div class="skills-bar skills-html"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-css3 skills-icon"></i>
+              <span class="skills-name">CSS</span>
+            </div>
+            <div class="skills-bar skills-css"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-javascript skills-icon"></i>
+              <span class="skills-name">JavaScript</span>
+            </div>
+            <div class="skills-bar skills-js"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-angular skills-icon"></i>
+              <span class="skills-name">Angular / AngularJS</span>
+            </div>
+            <div class="skills-bar skills-angular"></div>
+            <div><span class="skills-percentage">70%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-data skills-icon"></i>
+              <span class="skills-name">AJAX / JSON</span>
+            </div>
+            <div class="skills-bar skills-ajax"></div>
+            <div><span class="skills-percentage">70%</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="skills-subtitle">Programming & Databases</h2>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-java skills-icon"></i>
+              <span class="skills-name">Java (Core)</span>
+            </div>
+            <div class="skills-bar skills-java"></div>
+            <div><span class="skills-percentage">85%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-code-alt skills-icon"></i>
+              <span class="skills-name">C</span>
+            </div>
+            <div class="skills-bar skills-c"></div>
+            <div><span class="skills-percentage">65%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxs-server skills-icon"></i>
+              <span class="skills-name">SQL / PL-SQL</span>
+            </div>
+            <div class="skills-bar skills-sql"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-database skills-icon"></i>
+              <span class="skills-name">Oracle / MySQL</span>
+            </div>
+            <div class="skills-bar skills-db"></div>
+            <div><span class="skills-percentage">70%</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="skills-subtitle">Java Technologies & Frameworks</h2>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-cog skills-icon"></i>
+              <span class="skills-name">Servlets / JSP / JDBC</span>
+            </div>
+            <div class="skills-bar skills-servlet"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-package skills-icon"></i>
+              <span class="skills-name">Spring</span>
+            </div>
+            <div class="skills-bar skills-spring"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-layer skills-icon"></i>
+              <span class="skills-name">Hibernate (ORM)</span>
+            </div>
+            <div class="skills-bar skills-hibernate"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-code-block skills-icon"></i>
+              <span class="skills-name">JMS / EJB</span>
+            </div>
+            <div class="skills-bar skills-jms"></div>
+            <div><span class="skills-percentage">60%</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="skills-subtitle">Web Services, Tools & Servers</h2>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-transfer skills-icon"></i>
+              <span class="skills-name">SOAP / RESTful</span>
+            </div>
+            <div class="skills-bar skills-ws"></div>
+            <div><span class="skills-percentage">70%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-maven skills-icon"></i>
+              <span class="skills-name">Maven / GIT</span>
+            </div>
+            <div class="skills-bar skills-tools"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-server skills-icon"></i>
+              <span class="skills-name">Apache Tomcat / JBoss</span>
+            </div>
+            <div class="skills-bar skills-servers"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bxl-git skills-icon"></i>
+              <span class="skills-name">IDEs: Eclipse, STS, VS Code, Postman</span>
+            </div>
+            <div class="skills-bar skills-ides"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-desktop skills-icon"></i>
+              <span class="skills-name">OS: Windows / Linux</span>
+            </div>
+            <div class="skills-bar skills-os"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-atom skills-icon"></i>
+              <span class="skills-name">Methodologies: Agile / Waterfall</span>
+            </div>
+            <div class="skills-bar skills-method"></div>
+            <div><span class="skills-percentage">75%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-file skills-icon"></i>
+              <span class="skills-name">XML: DTD, XSD, XSL, XSLT, XPath, XQuery, DOM</span>
+            </div>
+            <div class="skills-bar skills-xml"></div>
+            <div><span class="skills-percentage">65%</span></div>
+          </div>
+
+          <div class="skills-data">
+            <div class="skills-names">
+              <i class="bx bx-brain skills-icon"></i>
+              <span class="skills-name">Others: OOP, QA Testing, Java Programming</span>
+            </div>
+            <div class="skills-bar skills-others"></div>
+            <div><span class="skills-percentage">80%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== Projects section =====-->
+    <section class="projects section" id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-container">
+
+        <!-- Online Blood Bank -->
+        <div class="project-img">
+          <!-- <img src="images/portfolio.png" alt="Online Blood Bank thumbnail" /> -->
+          <p class="project-title">Online Blood Bank</p>
+
+          <div class="project-subtitle">
+            <strong>Technology:</strong> HTML · CSS · PHP · MySQL · XAMPP
+            <div style="margin-top:0.6rem;">
+              <strong>Description</strong>
+              <ul>
+                <li>Designed and developed a web-based platform for hospitals and users to manage and request blood samples during emergencies.</li>
+                <li>Implemented real-time tracking of blood sample availability across hospitals.</li>
+                <li>Created a user-friendly interface and a centralized database for efficient operations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-btns">
+            <a href="https://github.com/shubhranshu-behera/OIBGRIP.git" target="_blank" class="small-btn button" aria-label="Repo"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Traffic Challan Management (with logo) -->
+        <div class="project-img">
+          <!-- Preferred: external image file placed at images/projects/traffic_logo.png -->
+          <!-- <img src="images/projects/traffic_logo.png" alt="Traffic Challan logo" class="project-thumb" /> -->
+
+          <!-- If you cannot add an image file, uncomment the inline SVG below and remove the <img> above:
+          <svg class="project-thumb" width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" fill="#2b7cff"/>
+            <path d="M7 18h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="8.5" cy="15.5" r="1.6" fill="#fff"/>
+            <circle cx="15.5" cy="15.5" r="1.6" fill="#fff"/>
+          </svg>
+          -->
+
+          <p class="project-title">Traffic Challan Management</p>
+
+          <div class="project-subtitle">
+            <strong>Technology:</strong> Java · Spring Boot · HTML · CSS · JavaScript · Bootstrap · MySQL
+            <div style="margin-top:0.6rem;">
+              <strong>Description</strong>
+              <ul>
+                <li>Developed a web-based application enabling admins to manage traffic challans (create, update, delete) and users to search, view, and pay fines online.</li>
+                <li>Integrated a secure payment gateway and implemented a centralized database for real-time updates.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-btns">
+            <a href="#" target="_blank" class="small-btn button" aria-label="Repo"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!--===== FOOTER + CONTACT =====-->
+  <footer class="footer" id="contact" aria-label="Footer">
+    <div class="footer-inner bd-grid">
+      <div class="footer-brand" aria-label="About">
+        <a class="footer-logo" href="#home" aria-label="Home">
+          <img src="images/logo.png" alt="logo" />
+          <span class="footer-name">Shubhranshu Shekhar Behera</span>
+        </a>
+        <p class="footer-desc">
+          Java Fullstack Developer — building scalable backends and polished frontends. Open to collaboration and new opportunities.
+        </p>
+        <div class="footer-social" aria-hidden="false">
+          <a href="https://www.linkedin.com/in/shubhranshu-behera" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/shubhranshu-behera" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="mailto:beherashubhranshu000@gmail.com" aria-label="Email"><i class="bx bx-mail-send"></i></a>
+          <a href="tel:+916372449022" aria-label="Phone"><i class="bx bx-phone"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact" aria-label="Contact">
+        <h4>Contact</h4>
+        <p><strong>Email:</strong> <a href="mailto:beherashubhranshu000@gmail.com">beherashubhranshu000@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+916372449022">+91 63724 49022</a></p>
+
+        <div class="newsletter" aria-label="Newsletter signup">
+          <label for="footer-email" class="sr-only">Subscribe to updates</label>
+          <div class="newsletter-row">
+            <input id="footer-email" type="email" placeholder="Your email" aria-label="Your email" />
+            <button id="subscribeBtn" class="btn subscribe-btn" type="button">Subscribe</button>
+          </div>
+          <!-- <small class="newsletter-note">No spam — just occasional updates and project news.</small> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© <span id="year"></span> Shubhranshu Shekhar Behera — All rights reserved</p>
+      <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <script>
+    // footer small behaviours
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const sub = document.getElementById('subscribeBtn');
+    if (sub) sub.addEventListener('click', (e) => {
+      e.preventDefault();
+      const em = document.getElementById('footer-email').value.trim();
+      if (!em) { sub.textContent = 'Enter email'; setTimeout(()=>sub.textContent='Subscribe',1400); return; }
+      sub.textContent = 'Thanks!';
+      setTimeout(()=>sub.textContent='Subscribe',1400);
+    });
+
+    // back to top
+    const btt = document.getElementById('backToTop');
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // show/hide back-to-top on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) btt.classList.add('visible'); else btt.classList.remove('visible');
+    });
+  </script>
+  <!--===== MAIN JS =====-->
+  <script src="main.js"></script>
+</body>
+
+</html>
